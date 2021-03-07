@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIFOS</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="shortcut icon" href="./assets/logo-mobile.svg" />
+    <script
+      src="https://kit.fontawesome.com/f6f4d3f591.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#">
+          <img src="./assets/logo-mobile.svg" alt="logo gifos" id="logoImg" />
+        </a>
+      </div>
+      <nav>
+        <input type="checkbox" id="menu" />
+        <label for="menu"><i class="fas fa-bars"></i></label>
+        <ul>
+          <li><a href="#" id="cambio">Modo Nocturno</a></li>
+          <li><a href="favoritos.html">Favoritos</a></li>
+          <li><a href="misfavoritos.html">Mis GIFOS</a></li>
+          <li class="boton-crear-gif">
+            <a href="creargifos.html" class="boton-crear-gif"><img src="./assets/button-crear-gifo.svg" alt="" /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="titulo">
+        <article>
+          <h2>
+            Inspírate, busca, guarda, y crea los mejores
+            <span class="aguamarina">GIFOS</span>
+          </h2>
+        </article>
+      </section>
+      <section class="buscar">
+        <div class="centro">
+          <img
+            src="./assets/ilustra_header.svg"
+            alt="logo principal"
+            class="imgcentro"
+          />
+        </div>
+        <div class="busqueda">
+          <form action="#" class="frmBuscar">
+            <img src="./assets/icon-search.svg" alt="icono de busqueda" id="iconSearch" class="no-mostrar"/>
+            <input
+              type="text"
+              placeholder="Buscar GIFOS y mas..."
+              id="buscar"
+              autocomplete="off"
+            />
+            <button id="searchBtn" type="submit" >
+              <img src="./assets/icon-search.svg" alt="icono de busqueda" />
+            </button>
+              <img src="./assets/close.svg" alt="icono de busqueda" id="BtnClose" class="no-mostrar" />
+          </form>
+          <ul id="autocompletar">
+           
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="tit-trending">
+          <h3>Trending</h3>
+          <ul id="key-Trendings"></ul>
+        </div>
+      </section>
+      <section class="Resultados">
+        <div class="hr">
+          <hr />
+        </div>
+        <div>
+        <h3 class="Resultados_titulo"><span style="display: none;">Vacio</span></h3>
+       </div>
+        <div class="Resultados_gif" id="resultados_Gif">
+
+        </div>
+        <button class="btnMostrarMas" id="MostrarBusqueda">VER MÁS</button>
+      </section>
+      <section id="error_sin_resultados" class="sin_resultados no-mostrar">
+        <div class="busqueda-empty">
+            <h2>Error 404 no encontrado</h2>
+            <img src="assets/icon-busqueda-sin-resultado.svg" alt="Sin Resultados">
+            <p>Intenta con otra búsqueda.</p>
+        </div>
+    </section>
+      <section class="gray">
+          <h3>Trending GIFOS</h3>
+          <p>Mira los últimos GIFOS de nuestra comunidad</p>
+        <div class="trendingGiphos">
+            <div id="results-Trending">
+                
+            </div>
+        </div>
+      </section>
+      <!--Modal para visualización de imagenes-->
+
+      <div class="mainPop" id="Pop" style="display:none;">
+        <div class="modalPop">
+          <div class="headerPop">
+            <img src="assets/close.svg" alt="cerrar" id="btnCerrarPop">
+          </div>
+          <div class="imgPop">
+            <img src="#" alt="gif" class="centralImg" id="imgCentralPop" />
+          </div>
+          <div class="imgOptions">
+            <p id="UserPop">User </p>
+            <p id="TituloPop">Title </p>
+            <div class="descargas">
+              <button id="btn_favoritos"><img src="assets/icon-fav-hover.svg"  data-gif_fav="" id="btnFavoritos" alt="Favoritos"/></button>
+              <button id="btn_descarga"><img src="assets/icon-download.svg" data-gif_url="" alt="Descargar" id="btnDescarga" /></button>
+            </div>  
+            </div>
+          
+         </div>
+	</div>
+        
+    </main>
+    <footer>
+      <ul>
+          <li>Compartir en:</li>
+        <li>
+          <a href="https://www.instragram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+      </ul>
+      <h4>© GIFOS 2020 All Rights Reserved.</h4>
+    </footer>
+    <script src="./js/dark.js"></script>
+    <script src="./js/giphy.js"></script>
+  </body>
+</html>

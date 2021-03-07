@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIFOS</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="shortcut icon" href="./assets/logo-mobile.svg" />
+    <script
+      src="https://kit.fontawesome.com/f6f4d3f591.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="crear">
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="./assets/logo-mobile.svg" alt="logo gifos" id="logoImg" />
+        </a>
+      </div>
+      <nav>
+        <input type="checkbox" id="menu" />
+        <label for="menu"><i class="fas fa-bars"></i></label>
+        <ul>
+          <li><a href="#" id="cambio">Modo Nocturno</a></li>
+          <li><a href="favoritos.html">Favoritos</a></li>
+          <li><a href="misfavoritos.html">Mis GIFOS</a></li>
+          <li class="boton-crear-gif">
+            <a href="#" class="boton-crear-gif"><img src="./assets/button-crear-gifo.svg" alt="" /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      
+      <section class="crearGif">
+        <div class="camara">
+            <div class="cintas">
+                <img id="cinta1" src="assets/element_cinta1.svg" alt="Cinta 1">
+                <img id="cinta2" src="assets/element_cinta2.svg" alt="Cinta 2">
+            </div>
+            <div class="camaraLuz">
+                <div class="camara1">
+                    <img id="camara_img" src="assets/element-camara.svg" alt="Camara">
+                </div>
+                <div class="luz">
+                    <img id="luz-animada" src="assets/element-luz-camara.svg" alt="Luz">
+                </div>
+            </div>
+        </div>
+        <div class="videoGif">
+            <div class="videoContenedor">
+                <div class="loadOverlay">
+                  <img src="assets/loader.svg" alt="Loader">
+                  <h3>Estamos subiendo tu GIFO</h3>
+                </div>
+                <div class="checkGifload">
+                  <div class="btn-miGifo" id="botones">
+                    <button><img src="assets/icon-download.svg" alt="Download" id="descarga"></button>
+                    <button><img src="assets/icon-link-normal.svg" alt="Link" id="vinculo"></button>
+                </div>
+                <img src="assets/check.svg" alt="Check">
+                <h3>GIFO subido con exito</h3>
+                </div>
+                <img src="" id="loadGif" />
+                <video id="gifRecorder"></video>
+                <div class="crearGifo">
+                    <div class="textoGifo">
+                        <h2>Aquí podrás crear tus propios <span>GIFOS</span></h2>
+                        <p>¡Crea tu GIFO en sólo 3 pasos!</p>
+                        <p>(sólo necesitas una cámara para grabar un video)</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="botonesCreargifo">
+                <h3 class="numeros">1</h3>
+                <h3 class="numeros">2</h3>
+                <h3 class="numeros">3</h3>
+                <h4 id="timer"></h4>
+                <h4 id="repetirGif">REPETIR CAPTURA</h4>
+            </div>
+            <div class="barra"></div>
+        </div>
+        <div class="cinta">
+            <img id="pelicula_img" src="assets/pelicula.svg" alt="Pelicula" />
+        </div>    
+        
+      </section>
+      <section class="menuControl">
+        <button id="iniciarCamara">COMENZAR</button>
+        <button id="Grabar">GRABAR</button>
+        <button id="Finalizar">FINALIZAR</button>
+        <button id="Subir">SUBIR</button>
+      </section>
+    
+     
+ 
+        
+    </main>
+    <footer>
+      <ul>
+          <li>Compartir en:</li>
+        <li>
+          <a href="https://www.instragram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+      </ul>
+      <h4>© GIFOS 2020 All Rights Reserved.</h4>
+    </footer>
+    <script src="./js/dark.js"></script>
+    <script src="./js/creargifo.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+  </body>
+</html>
