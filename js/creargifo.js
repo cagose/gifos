@@ -182,7 +182,7 @@ repetirGif.addEventListener('click',ev =>{
     ev.preventDefault();
     console.log('repetirgif')
     //console.log(blob);
-    img.src = ''
+    img.src = 'assets/gifo.png'
     video.style.display = 'block'
     
     repetirGif.style.display = 'none';
