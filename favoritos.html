@@ -37,6 +37,7 @@
     </header>
     <main>
       <section class="titulo">
+        <h2 class="titulos">Seccion favoritos</h2>
         <article>
             <img src="assets/icon-favoritos.svg" alt="">
           <h2>
@@ -51,20 +52,21 @@
           <hr />
         </div>
         <div>
-        <h3 class="Resultados_titulo"></h3>
+        <h3 class="Resultados_titulo"><span style="display:none">resultado</span></h3>
        </div>
         <div class="Resultados_gif" id="resultados_Gif">
 
         </div>
       </section>
-      <section id="error_sin_resultados" class="sin_resultados no-mostrar">
+      <section id="error_sin_resultados" class="sin_resultados" style="display:none">
+        <h2 class="titulos">Seccion gris</h2>
         <div class="busqueda-empty">
-            <h2>Error 404 no encontrado</h2>
-            <img src="assets/icon-busqueda-sin-resultado.svg" alt="Sin Resultados">
-            <p>Intenta con otra búsqueda.</p>
+            <img src="assets/icon-fav-sin-contenido.svg" alt="Sin Resultados">
+            <p>"¡Guarda tu primer GIFO en Favoritos<br>para que se muestre aqui!"</p>
         </div>
     </section>
       <section class="gray">
+        <h2 class="titulos">Seccion gris</h2>
           <h3>Trending GIFOS</h3>
           <p>Mira los últimos GIFOS de nuestra comunidad</p>
         <div class="trendingGiphos">
@@ -115,6 +117,7 @@
           </div>
         
        </div>
+      </div>
     <script src="./js/dark.js"></script>
     <script src="./js/favoritos.js"></script>
   </body>

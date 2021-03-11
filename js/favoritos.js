@@ -144,11 +144,15 @@ btn_Trending.addEventListener('click',(e)=>{
 
 /****** MOSTRAR FAVORITOS *****/
 
+const error_sin_resultados = document.getElementById('error_sin_resultados');
+
 const putFavoritos = async () => {
   if(arregloFavoritos.length == 0 ){
     alert("NO hay favoritos")
     console.log('no hay favoritos')
+    error_sin_resultados.style.display = 'block';
   }else{ 
+    error_sin_resultados.style.display = 'none';
     const response = await fetch(
       `https://api.giphy.com/v1/gifs?ids=${arregloFavoritos.toString()}&api_key=${api_key}`
     );
@@ -180,7 +184,9 @@ const putFavoritos = async () => {
     if(arregloFavoritos.length == 0 ){
         alert("NO hay favoritos")
         console.log('no hay favoritos')
+        error_sin_resultados.style.display = 'block';
     }else{
+      error_sin_resultados.style.display = 'none';
     const response = await fetch(`${URLFavoritos}?ids=${nuevoFavorito}&api_key=${api_key}`);
     //const response = await fetch(url)
     const data = await response.json();
@@ -232,6 +238,9 @@ const BorrarFavoritos = (arr,item)=>{
     const i = arr.indexOf( item );
         if ( i !== -1 ) {
            arr.splice( i, 1 );
+        }
+        if (i == 0){
+          error_sin_resultados.style.display = 'block';
         }
         console.log(item)
         console.log(i)
